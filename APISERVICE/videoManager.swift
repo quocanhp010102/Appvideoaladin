@@ -36,7 +36,21 @@ struct VideoManager {
             task.resume()
         }
     }
-    
+    func fetchMusic(musicUrl: String,page:Int,completion: @escaping ApiCompletion){
+        if let url = URL(string: musicUrl + String(page)) {
+            print(url)
+            let session = URLSession(configuration: .default)
+            
+            // Tạo data task với closure trực tiếp thay vì gọi hàm handle
+            let task = session.dataTask(with: url) { data, response, error in
+                // Gọi handle để xử lý phản hồi
+                DispatchQueue.main.async {
+                    self.handle(data: data, response: response, error: error,completion: completion)
+                }
+            }
+            task.resume()
+        }
+    }
     func handle(data: Data?, response: URLResponse?, error: Error?,completion: @escaping ApiCompletion) {
         if let error = error {
             print(error)

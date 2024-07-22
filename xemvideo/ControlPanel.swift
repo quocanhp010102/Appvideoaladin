@@ -33,7 +33,8 @@ class ControlPanel: UIView {
     var rewindButton: UIButton = {
         let button = UIButton(type: .custom)
         button.tintColor = .white
-        button.setImage(UIImage(named: "audio")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        let image = UIImage(systemName: "backward.fill")?.withRenderingMode(.alwaysTemplate)
+          button.setImage(image, for: .normal)
         return button
     }()
 
@@ -41,7 +42,9 @@ class ControlPanel: UIView {
     var fastForwardButton: UIButton = {
         let button = UIButton(type: .custom)
         button.tintColor = .white
-        button.setImage(UIImage(named: "audio")?.withRenderingMode(.alwaysTemplate), for: .normal)
+      
+        let image = UIImage(systemName: "forward.fill")?.withRenderingMode(.alwaysTemplate)
+          button.setImage(image, for: .normal)
         return button
     }()
 
@@ -194,14 +197,14 @@ private extension ControlPanel {
         rewindButton.addTarget(self, action: #selector(didTapRewind), for: .touchUpInside)
         rewindButton.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
         rewindButton.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-        rewindButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 10.0).isActive = true
+        rewindButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 60.0).isActive = true
         rewindButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         addSubview(fastForwardButton)
         fastForwardButton.addTarget(self, action: #selector(didTapFastForward), for: .touchUpInside)
         fastForwardButton.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
         fastForwardButton.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-        fastForwardButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10.0).isActive = true
+        fastForwardButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -40).isActive = true
         fastForwardButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     

@@ -23,7 +23,6 @@ struct video : Codable {
         if let temp = json["name"] as? String {name = temp}
         if let temp = json["descriptio"] as? String {descriptio = temp}
         if let temp = json["cover_path"] as? String {cover_path = temp}
-        
         if let temp = json["play_times"] as? String {play_times = temp}
         if let temp = json["duration"] as? String {duration = temp}
         if let temp = json["in_library"] as? Bool {in_library = temp}

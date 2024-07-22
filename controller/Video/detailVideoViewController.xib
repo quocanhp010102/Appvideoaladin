@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="detailVideoViewController" customModule="halodemoAladin" customModuleProvider="target">
+            <connections>
+                <outlet property="next10s" destination="fXO-ap-fRo" id="k9J-ko-OuV"/>
+                <outlet property="pre10s" destination="96F-WU-pCa" id="aiB-dM-B82"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96F-WU-pCa">
+                    <rect key="frame" x="42" y="783" width="44.666666666666657" height="35"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="&lt;&lt;">
+                        <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-ap-fRo">
+                    <rect key="frame" x="306.33333333333331" y="783" width="44.666666666666686" height="35"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="&gt;&gt;">
+                        <color key="baseForegroundColor" systemColor="tableBackgroundColor"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="96F-WU-pCa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="5I4-1a-KyR"/>
+                <constraint firstItem="fXO-ap-fRo" firstAttribute="centerY" secondItem="96F-WU-pCa" secondAttribute="centerY" id="SD9-4Z-YXZ"/>
+                <constraint firstItem="96F-WU-pCa" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="hTB-a7-0h2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fXO-ap-fRo" secondAttribute="trailing" constant="42" id="ofz-gg-ImX"/>
+            </constraints>
+            <point key="canvasLocation" x="21" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

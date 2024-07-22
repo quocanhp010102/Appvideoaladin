@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailMusicViewController" customModule="halodemoAladin" customModuleProvider="target">
+            <connections>
+                <outlet property="MusicListCLV" destination="oJN-SP-J7R" id="VdM-2G-9ba"/>
+                <outlet property="imageALbum" destination="jem-vZ-t1w" id="JrH-Vr-WuH"/>
+                <outlet property="titleAlbum" destination="tlH-2X-PFj" id="zss-7b-YFg"/>
+                <outlet property="view" destination="df9-8u-SPP" id="wt6-H0-2k6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="DetailMusicViewController" id="df9-8u-SPP">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jem-vZ-t1w">
+                    <rect key="frame" x="106.66666666666669" y="84" width="180" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="cWr-5i-RKc"/>
+                        <constraint firstAttribute="height" constant="100" id="h0G-ew-UJS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlH-2X-PFj">
+                    <rect key="frame" x="175.66666666666666" y="209" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="oJN-SP-J7R">
+                    <rect key="frame" x="35" y="265" width="338" height="533"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rac-Ug-hKd">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eOH-Na-FKA"/>
+                        <outlet property="delegate" destination="-1" id="Y1Y-SB-APm"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBw-w1-aLX">
+                    <rect key="frame" x="15" y="59" width="78" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Back"/>
+                    <connections>
+                        <action selector="backBTN:" destination="-1" eventType="touchUpInside" id="jOI-DW-3Lx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="6wX-XB-XPI"/>
+            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <constraints>
+                <constraint firstItem="6wX-XB-XPI" firstAttribute="trailing" secondItem="oJN-SP-J7R" secondAttribute="trailing" constant="20" id="832-S0-Pz7"/>
+                <constraint firstItem="tlH-2X-PFj" firstAttribute="centerX" secondItem="df9-8u-SPP" secondAttribute="centerX" id="GOV-kj-1uk"/>
+                <constraint firstItem="oJN-SP-J7R" firstAttribute="leading" secondItem="6wX-XB-XPI" secondAttribute="leading" constant="35" id="N5S-Vr-jJH"/>
+                <constraint firstItem="6wX-XB-XPI" firstAttribute="bottom" secondItem="oJN-SP-J7R" secondAttribute="bottom" constant="20" id="b4D-wn-O8d"/>
+                <constraint firstItem="oJN-SP-J7R" firstAttribute="top" secondItem="tlH-2X-PFj" secondAttribute="bottom" constant="35" id="db1-YC-kr2"/>
+                <constraint firstItem="JBw-w1-aLX" firstAttribute="top" secondItem="6wX-XB-XPI" secondAttribute="top" id="hvg-t1-wus"/>
+                <constraint firstItem="jem-vZ-t1w" firstAttribute="top" secondItem="6wX-XB-XPI" secondAttribute="top" constant="25" id="mJY-VU-UZ7"/>
+                <constraint firstItem="jem-vZ-t1w" firstAttribute="centerX" secondItem="df9-8u-SPP" secondAttribute="centerX" id="ppe-h6-x1v"/>
+                <constraint firstItem="JBw-w1-aLX" firstAttribute="leading" secondItem="6wX-XB-XPI" secondAttribute="leading" constant="15" id="rgF-sQ-USN"/>
+                <constraint firstItem="tlH-2X-PFj" firstAttribute="top" secondItem="jem-vZ-t1w" secondAttribute="bottom" constant="25" id="yK2-IV-3d6"/>
+            </constraints>
+            <point key="canvasLocation" x="-116.79389312977099" y="-51.408450704225352"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

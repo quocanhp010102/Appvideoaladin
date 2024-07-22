@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j9n-CF-UMb">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,7 +10,86 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Music-->
+        <scene sceneID="86R-wa-yPC">
+            <objects>
+                <viewController storyboardIdentifier="MusicViewController" id="nlM-q7-wTK" customClass="MusicViewController" customModule="halodemoAladin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="foR-av-zZI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G3H-oA-AGp">
+                                <rect key="frame" x="0.0" y="146.66666666666669" width="393" height="622.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r4x-ZN-3fI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gPm-TD-3Ai">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X48-wg-Kqw">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="nlM-q7-wTK" id="zdV-KB-VMI"/>
+                                    <outlet property="delegate" destination="nlM-q7-wTK" id="oxR-7T-1DR"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top âm nhac" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-Iw-PFu">
+                                <rect key="frame" x="104" y="81" width="185" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kna-vr-5uG"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G3H-oA-AGp" firstAttribute="bottom" secondItem="Kna-vr-5uG" secondAttribute="bottom" id="44I-Y1-TyG"/>
+                            <constraint firstItem="G3H-oA-AGp" firstAttribute="trailing" secondItem="Kna-vr-5uG" secondAttribute="trailing" id="75o-9n-5Qj"/>
+                            <constraint firstItem="G3H-oA-AGp" firstAttribute="top" secondItem="Yhf-Iw-PFu" secondAttribute="bottom" constant="25" id="Db3-U2-kkv"/>
+                            <constraint firstItem="Yhf-Iw-PFu" firstAttribute="centerX" secondItem="foR-av-zZI" secondAttribute="centerX" id="e1J-pR-qkT"/>
+                            <constraint firstItem="G3H-oA-AGp" firstAttribute="leading" secondItem="Kna-vr-5uG" secondAttribute="leading" id="sRd-CT-969"/>
+                            <constraint firstItem="Yhf-Iw-PFu" firstAttribute="top" secondItem="Kna-vr-5uG" secondAttribute="top" constant="22" id="twY-iA-19d"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Music" image="externaldrive.fill.badge.person.crop" catalog="system" id="I5Y-Tm-GFl"/>
+                    <connections>
+                        <outlet property="MusicCLV" destination="G3H-oA-AGp" id="ERn-VO-oXx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tB-Le-lqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-469" y="-75"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6UO-Pw-s2f">
+            <objects>
+                <tabBarController id="j9n-CF-UMb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AeH-OM-dw4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="linkColor"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nlM-q7-wTK" kind="relationship" relationship="viewControllers" id="Qg5-eG-8r1"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Fqg-PD-Hz9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUB-Kr-Llf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1628" y="-442"/>
+        </scene>
+        <!--Video-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="halodemoAladin" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rfE-AS-cYs">
-                                <rect key="frame" x="0.0" y="142" width="393" height="676"/>
+                                <rect key="frame" x="0.0" y="142" width="393" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rOw-c4-d1B">
                                     <size key="itemSize" width="128" height="128"/>
@@ -72,6 +151,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rfE-AS-cYs" secondAttribute="bottom" id="zs8-0e-nNs"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="internaldrive.fill" catalog="system" id="Opn-Qm-PWE"/>
                     <connections>
                         <outlet property="chontrang" destination="11m-1G-Lep" id="mue-3c-aUT"/>
                         <outlet property="clssviewlist" destination="rfE-AS-cYs" id="wVC-AQ-zJW"/>
@@ -79,11 +159,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-602" y="-830"/>
         </scene>
     </scenes>
     <resources>
+        <image name="externaldrive.fill.badge.person.crop" catalog="system" width="128" height="93"/>
+        <image name="internaldrive.fill" catalog="system" width="128" height="87"/>
         <image name="plus.rectangle.on.folder.fill" catalog="system" width="128" height="96"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

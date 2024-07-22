@@ -5,9 +5,9 @@
 //  Created by quocanhppp on 11/07/2024.
 //
 
-    import UIKit
+import UIKit
 import ProgressHUD
-
+import AVFoundation
 
 
     class ViewController: UIViewController {
@@ -100,11 +100,7 @@ import ProgressHUD
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-       
-        
-        return 1
-    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
@@ -113,7 +109,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let storyboard = UIStoryboard(name: "mhchinh", bundle: nil)
               let vc = detailVideoViewController()
-        self.present(vc, animated: true, completion: nil)
+              self.present(vc, animated: true, completion: nil)
        
    
     }
@@ -121,7 +117,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
        
         
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.bindData(text: self.listItem[indexPath.row].name ?? "",image: self.listItem[indexPath.row].cover_path ?? "")
+            cell.bindData(text: self.listItem[indexPath.row].name ?? "",image: self.listItem[indexPath.row].cover_path ?? "")
        // cell.playertimeLable.text = self.listItem[indexPath.row].play_times
             return cell
            
