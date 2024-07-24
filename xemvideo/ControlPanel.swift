@@ -222,6 +222,7 @@ private extension ControlPanel {
         delegate?.controlPanel(self, didTapMuteButton: muteButton)
     }
     
+    
     @objc func didChangePlaybackTime() {
         delegate?.controlPanel(self, didChangeProgressSliderValue: progressView)
     }

@@ -158,3 +158,16 @@ extension detailVideoViewController: ReplayPanelDelegate {
         playerView.replay()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
